@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Practice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Accordion Sample HTML Start -->
+    <div id="accordianGroup" class="accordion">
+        <h3 class="accordion-header">
+            <button type="button" class="accordion-button" id="accourdianPanel1" aria-controls="section1" aria-expanded="true">
+                Accordian 1
+            </button>
+        </h3>
+        <div class="accordion-collapse collapse" aria-labelledby="accourdianPanel1" id="section1" role="region">
+            <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+        </div>
+        <h3 class="accordion-header">
+            <button type="button" class="accordion-button" id="accordionPanel2" aria-controls="section2" aria-expanded="false">
+                Accordian 2
+            </button>
+        </h3>
+        <div class="accordion-collapse collapse" aria-labelledby="accordionPanel2" role="region" id="section2">
+            <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+        </div>
+        <h3 class="accordion-header">
+            <button type="button" class="accordion-button" id="accordianPanel3" aria-controls="section3" aria-expanded="false">
+                Accordion 3
+            </button>
+        </h3>
+        <div class="accordion-collapse collapse" aria-labelledby="accordianPanel3" id="section3" role="region">
+            <div class="accordion-body">
+                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              </div>
+        </div>
+    </div>
+
+    <div id="accordionGroup" class="accordion">
+        <h3>
+            <button type="button" aria-expanded="true" class="accordion-trigger" aria-controls="sect1"
+                id="accordion1id">
+                <span class="accordion-title">
+                    Personal Information
+                    <span class="accordion-icon"></span>
+                </span>
+            </button>
+        </h3>
+        <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordion-panel">
+            <div>
+
+                <fieldset>
+                    <p>
+                        <label for="cufc1">Name<span aria-hidden="true">*</span>:</label>
+                        <input type="text" value="" name="Name" id="cufc1" class="required" aria-required="true">
+                    </p>
+                    <p>
+                        <label for="cufc2">Email<span aria-hidden="true">*</span>:</label>
+                        <input type="text" value="" name="Email" id="cufc2" aria-required="true">
+                    </p>
+                    <p>
+                        <label for="cufc3">Phone:</label>
+                        <input type="text" value="" name="Phone" id="cufc3">
+                    </p>
+                    <p>
+                        <label for="cufc4">Extension:</label>
+                        <input type="text" value="" name="Ext" id="cufc4">
+                    </p>
+                    <p>
+                        <label for="cufc5">Country:</label>
+                        <input type="text" value="" name="Country" id="cufc5">
+                    </p>
+                    <p>
+                        <label for="cufc6">City/Province:</label>
+                        <input type="text" value="" name="City_Province" id="cufc6">
+                    </p>
+                </fieldset>
+            </div>
+        </div>
+        <h3>
+            <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect2"
+                id="accordion2id">
+                <span class="accordion-title">
+                    Billing Address
+                    <span class="accordion-icon"></span>
+                </span>
+            </button>
+        </h3>
+        <div id="sect2" role="region" aria-labelledby="accordion2id" class="accordion-panel" hidden="">
+            <div>
+                <fieldset>
+                    <p>
+                        <label for="b-add1">Address 1:</label>
+                        <input type="text" name="b-add1" id="b-add1">
+                    </p>
+                    <p>
+                        <label for="b-add2">Address 2:</label>
+                        <input type="text" name="b-add2" id="b-add2">
+                    </p>
+                    <p>
+                        <label for="b-city">City:</label>
+                        <input type="text" name="b-city" id="b-city">
+                    </p>
+                    <p>
+                        <label for="b-state">State:</label>
+                        <input type="text" name="b-state" id="b-state">
+                    </p>
+                    <p>
+                        <label for="b-zip">Zip Code:</label>
+                        <input type="text" name="b-zip" id="b-zip">
+                    </p>
+                </fieldset>
+            </div>
+        </div>
+        <h3>
+            <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect3"
+                id="accordion3id">
+                <span class="accordion-title">
+                    Shipping Address
+                    <span class="accordion-icon"></span>
+                </span>
+            </button>
+        </h3>
+        <div id="sect3" role="region" aria-labelledby="accordion3id" class="accordion-panel" hidden="">
+            <div>
+                <fieldset>
+                    <p>
+                        <label for="m-add1">Address 1:</label>
+                        <input type="text" name="m-add1" id="m-add1">
+                    </p>
+                    <p>
+                        <label for="m-add2">Address 2:</label>
+                        <input type="text" name="m-add2" id="m-add2">
+                    </p>
+                    <p>
+                        <label for="m-city">City:</label>
+                        <input type="text" name="m-city" id="m-city">
+                    </p>
+                    <p>
+                        <label for="m-state">State:</label>
+                        <input type="text" name="m-state" id="m-state">
+                    </p>
+                    <p>
+                        <label for="m-zip">Zip Code:</label>
+                        <input type="text" name="m-zip" id="m-zip">
+                    </p>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Accordion Sample HTML End -->
+
+    <!-- Alert Sample HTML Start -->
+    <button type="button" id="showAlert">Show Alert</button>
+    <div id="alertMsg" role="alert">
+        Hi, this is a alert
+    </div>
+    <!-- Alert Sample HTML Start -->
+
+    <!-- Alert Dialog Sample HTML Start -->
+    <button type="button" id="showModalBtn" onclick="showModal()">Show Modal</button>
+    <div>
+        <div id="alertDialog" role="alertdialog" aria-modal="true" aria-labelledby="alertDialogHeading" aria-describedby="alertDialogDes">
+            <h2 id="alertDialogHeading">Dialog example Heading</h2>
+            <p id="alertDialogDes">Details description about dialog</p>
+        </div>
+    </div>
+    <!-- Alert Dialog Sample HTML End -->
+
+    <!-- Breadcrumb Sample HTML Start -->
+    <nav aria-label="Product list breadcrumb">
+        <ol>
+            <li><a href="">Home</a></li>
+            <li><a href="">English</a></li>
+            <li><a href="">Product List</a></li>
+            <li><a href="" aria-current="page">Product Details</a></li>
+        </ol>
+    </nav>
+    <!-- Breadcrumb Sample HTML End -->
+
+    <!-- Button Sample HTML Start -->
+    <button type="button" id="toggleVloumeBtn" aria-pressed="false">Mute</button>
+    <!-- Button Sample HTML End -->
+
+    <!-- Checkbox Sample HTML Start -->
+    <h3 id="groceryList">Grocery List</h3>
+    <ul aria-labelledby="groceryList" role="group">
+        <li>
+            <label>
+                <input type="checkbox" value="" aria-checked="false" />
+                Rice
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="checkbox" value="" aria-checked="false" />
+                Rice
+            </label>
+        </li>
+        <li>
+            <label>
+                <input type="checkbox" value="" aria-checked="false" />
+                Rice
+            </label>
+        </li>
+    </ul>
+    <fieldset>
+        <legend>Grocery</legend>
+        <div>
+            <label>
+                <input type="checkbox" aria-checked="mixed" aria-controls="item1 item2 item3" />
+                All Grocery
+            </label>
+        </div>
+        <ul>
+            <li>
+                <label>
+                    <input type="checkbox" aria-checked="true" checked id="item1" />
+                    Rice
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" aria-checked="false" id="item2" />
+                    Rice
+                </label>
+            </li>
+            <li>
+                <label>
+                    <input type="checkbox" aria-checked="false" id="item3" />
+                    Rice
+                </label>
+            </li>
+        </ul>
+    </fieldset>
+    <!-- Checkbox Sample HTML End -->
+
+    <!-- Combobox Sample HTML Start -->
+    <!-- https://www.w3.org/WAI/ARIA/apg/patterns/combobox/ -->
+    <!-- Combobox Sample HTML End -->
+
+    <!-- Dialog Sample HTML Start -->
+    <button type="button" id="toggleDialogBtn" onclick="toggleDialog()">Show Dialog Box</button>
+    <div hidden>
+        <div id="dialogModal" role="dialog" aria-modal="true" aria-labelledby="dialogHeading" aria-describedby="dialogDes">
+            <h1 id="dialogHeading">Dialog Modal Headging</h1>
+            <div id="dialogDes">
+                <p>Dialog Modal details description</p>
+                <p>tewt escription</p>
+                <p>Modal content</p>
+            </div>
+        </div>
+    </div>
+    <input type="text" aria-describedby="chooseCal" />
+    <div id="chooseCal" role="dialog" aria-modal="true" aria-label="Choose Date">
+        calender box
+    </div>
+    <!-- Dialog Sample HTML End -->
+
+    <!-- Show/Hide / Navigation menu Sample HTML Start -->
+    <button type="button" id="showContent" aria-controls="content1" aria-expanded="false">Show Content</button>
+    <div aria-labelledby="showContent" id="content1">
+        <p id="contentDetails">Content Details</p>
+        <table aria-labelledby="contentDetails">
+            <tr>
+                <td>conten in table</td>
+            </tr>
+        </table>
+    </div>
+    <nav aria-label="E-commerce menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">About Us</a>
+                <button type="button" id="aboutMenuBtn" aria-expanded="false" aria-controls="aboutSubMenu" aria-label="More About us">^</button>
+                <ul id="aboutSubMenu" hidden>
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Overview1</a></li>
+                    <li><a href="#">Overview2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Product</a>
+                <button type="button" id="productMenuBtn" aria-expanded="false" aria-controls="productSubMenu" aria-label="More Product Menu">^</button>
+                <ul id="productSubMenu" hidden>
+                    <li><a href="#">Peoduct1</a></li>
+                    <li><a href="#">Peoduct2</a></li>
+                    <li><a href="#">Peoduct3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- Show/Hide / Navigation menu Sample HTML End -->
+
+    <!-- Feed Sample HTML Start -->
+    <section id="feedContent">
+        <div id="restaurantFeed" role="feed" aria-busy="true">
+            <article tabindex="0" aria-posinset="1" aria-labelledby="res1" aria-describedby="res1Rat res1Typ res1Loc" aria-setsize="10">
+                <h2 id="res1">Rest Name 1</h2>
+                <p id="res1Rat">Rating 5</p>
+                <p id="res1Typ">Restaurant Deluxe</p>
+                <p id="res1Loc">Kolkata</p>
+            </article>
+            <article tabindex="0" aria-posinset="2" aria-labelledby="res2" aria-describedby="res2Rat res2Typ res2Loc" aria-setsize="10">
+                <h2 id="res2">Rest Name2</h2>
+                <p id="res2Rat">Rating 3</p>
+                <p id="res2Typ">Restaurant Sub Deluxe</p>
+                <p id="res2Loc">Mumbai</p>
+            </article>
+        </div>
+    </section>
+    <!-- Feed Sample HTML End -->
+
+    <!-- Grid Layout Sample HTML Start -->
+    <h4>Layout Grid example</h4>
+    <div id="layoutGridEx1" role="grid" aria-labelledby="grid1Label">
+        <div role="row">
+            <span role="gridcell">
+                <a href="#" tabindex="-1">Table content 1</a>
+            </span>
+            <span role="gridcell">
+                <a href="#" tabindex="-1">Table content 2</a>
+            </span>
+            <span role="gridcell">
+                <a href="#" tabindex="-1">Table content 3</a>
+            </span>
+            <span role="gridcell">
+                <a href="#" tabindex="-1">Table content 4</a>
+            </span>
+        </div>
+    </div>
+    <h4 id="dataGridTable">Data Grid example</h4>
+    <table id="tableGrid" role="grid" aria-labelledby="dataGridTable" aria-rowcount="2" aria-colcount="2">
+        <thead>
+            <tr>
+                <th aria-sort="ascending">Name</th>
+                <th aria-sort="none">
+                    <span tabindex="-1" role="button">
+                        Amount
+                    </span>
+                </th>
+            </tr>
+            <tr>
+                <td tabindex="-1">John</td>
+                <td tabindex="-1">Male</td>
+            </tr>
+            <tr>
+                <td tabindex="-1">John</td>
+                <td tabindex="-1">
+                    <button type="button" aria-haspopup="true" aria-controls="genderDetails" tabindex="-1">Details</button>
+                    <ul role="menu" id="genderDetails" tabindex="-1" hidden>
+                        <li role="menuitem" tabindex="-1">Option 1</li>
+                        <li role="menuitem" tabindex="-1">Option 2</li>
+                        <li role="menuitem" tabindex="-1">Option 3</li>
+                        <li role="menuitem" tabindex="-1">Option 4</li>
+                        <li role="menuitem" tabindex="-1">Option 5</li>
+                    </ul>
+                </td>
+            </tr>
+        </thead>
+    </table>
+    <!-- Grid Layout Sample HTML End -->
+
+    <!-- Landmark Sample HTML Start -->
+    <header>
+        <h1></h1>
+    </header>
+    <section>
+        <nav></nav>
+        <main><h2></h2></main>
+        <aside><h2></h2></aside>
+    </section>
+    <footer></footer>
+    <!-- Landmark Sample HTML End -->
+
+    <!-- Link Sample HTML Start -->
+    <span tabindex="0"
+      role="link"
+      onclick="goToLink(event, 'https://www.w3.org/TR/wai-aria-practices/')"
+      onkeydown="goToLink(event, 'https://www.w3.org/TR/wai-aria-practices/')"
+      aria-label="W3C website"></span>
+    <!-- Link Sample HTML End -->
+
+    <!-- Listbox Sample HTML Start -->
+    <h4>Scrollable Listbox Example</h4>
+    <div>
+        <span id="optionListHeading">Listbox elements</span>
+        <ul id="optionListBox" tabindex="0" role="listbox" aria-labelledby="optionListHeading">
+            <li tabindex="-1" role="option" id="opt1">option 1</li>
+            <li tabindex="-1" role="option" id="opt2">option 2</li>
+            <li tabindex="-1" role="option" id="opt3">option 3</li>
+            <li tabindex="-1" role="option" id="opt4">option 4</li>
+            <li tabindex="-1" role="option" id="opt5">option 5</li>
+        </ul>
+    </div>
+    <h4>Listbox Example with Grouped Options</h4>
+    <div>
+        <span id="optionListHeading">Listbox elements</span>
+        <div id="optionListBox"tabindex="0" role="listbox" aria-labelledby="optionListHeading">
+            <ul role="group" aria-labelledby="cat1">
+                <li tabindex="-1" role="presentation" id="cat1"></li>
+                <li tabindex="-1" role="option" id="opt1">option 1</li>
+                <li tabindex="-1" role="option" id="opt2">option 2</li>
+                <li tabindex="-1" role="option" id="opt3">option 3</li>
+                <li tabindex="-1" role="option" id="opt4">option 4</li>
+                <li tabindex="-1" role="option" id="opt5">option 5</li>
+            </ul>
+            <ul role="group" aria-labelledby="cat2">
+                <li tabindex="-1" role="presentation" id="cat2"></li>
+                <li tabindex="-1" role="option" id="opt1">option 1</li>
+                <li tabindex="-1" role="option" id="opt2">option 2</li>
+                <li tabindex="-1" role="option" id="opt3">option 3</li>
+                <li tabindex="-1" role="option" id="opt4">option 4</li>
+                <li tabindex="-1" role="option" id="opt5">option 5</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Listbox Sample HTML End -->
+
+    <!-- MenuBar Sample HTML Start -->
+    <h4>Editor menubar example</h4>
+    <div>
+        <ul role="menubar" aria-label="Text formatting">
+            <li role="none">
+                <span role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                    Font
+                    <span aria-hidden="true">^</span>
+                </span>
+                <ul role="menu" data-option="font-family" aria-label="Font">
+                    <li role="menuitemradio" aria-checked="true">Sans-serif</li>
+                    <li role="menuitemradio" aria-checked="false">Serif</li>
+                    <li role="menuitemradio" aria-checked="false">Monospace</li>
+                </ul>
+            </li>
+            <li role="none">
+                <span role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="-1">
+                    Style/Color
+                    <span aria-hidden="true">^</span>
+                </span>
+                <ul role="menu" aria-label="Style/Color">
+                    <li role="none">
+                        <ul role="group" data-option="font-style" aria-label="font-style">
+                            <li role="menuitemcheckbox" data-option="font-bold" aria-checked="false">Bold</li>
+                            <li role="menuitemcheckbox" data-option="font-italic" aria-checked="false">Italic</li>
+                        </ul>
+                    </li>
+                    <li role="none">
+                        <ul role="group" data-option="font-color" aria-label="Font Color">
+                            <li role="menuitemradio" aria-checked="true">Black</li>
+                            <li role="menuitemradio" aria-checked="false">Blue</li>
+                            <li role="menuitemradio" aria-checked="false">Green</li>
+                            <li role="menuitemradio" aria-checked="false">Red</li>
+                        </ul>
+                    </li>
+                    <li role="separator"></li>
+                    <li role="none">
+                        <ul role="group" data-option="font-decoration" aria-label="Font Decoration">
+                            <li role="menuitemradio" aria-checked="true">None</li>
+                            <li role="menuitemradio" aria-checked="false">Overline</li>
+                            <li role="menuitemradio" aria-checked="false">Line-through</li>
+                            <li role="menuitemradio" aria-checked="false">Underline</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li role="none">
+                <span role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="-1">
+                    Text Align
+                    <span aria-hidden="true">^</span>
+                </span>
+                <ul role="menu" data-option="text-align" aria-label="Text Align">
+                    <li role="menuitemradio" aria-checked="true">Left</li>
+                    <li role="menuitemradio" aria-checked="false">Right</li>
+                    <li role="menuitemradio" aria-checked="false">Center</li>
+                    <li role="menuitemradio" aria-checked="false">Justify</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <h4>Editor menubar example</h4>
+    <nav aria-label="E-commerce Menu">
+        <ul role="menubar">
+            <li role="none">
+                <a role="menuitem" href="#">Home</a>
+            </li>
+            <li role="none">
+                <a role="menuitem" aria-haspopup="true" aria-expanded="false" href="#">About</a>
+                <ul role="menu" aria-label="About">
+                    <li role="none">
+                        <a role="menuitem" href="#">My profile</a>
+                    </li>
+                    <li role="none">
+                        <a role="menuitem" href="#">Our vision</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- MenuBar Sample HTML End -->
+
+    <!-- Menu Button Sample HTML Start -->
+    <button type="button" id="actionMenuBtn" aria-haspopup="true" aria-controls="menu1">Action</button>
+    <ul id="menu1" role="menu" tabindex="-1" aria-labelledby="actionMenuBtn" aria-activedescendant="acionMenu1">
+        <li id="acionMenu1" role="menuitem">Action menu 1</li>
+        <li id="acionMenu2" role="none"><a role="menuitem" href="#">Action menu 2</a></li>
+        <li id="acionMenu3" role="menuitem">Action menu 3</li>
+        <li id="acionMenu4" role="menuitem">Action menu 4</li>
+        <li id="acionMenu5" role="menuitem">Action menu 5</li>
+    </ul>
+    <!-- Menu Button Sample HTML End -->
+
+    <!-- Meter Sample HTML Start -->
+    <h4 id="volumeLabel">Media volume control</h4>
+    <div role="meter" aria-valuenow="44" aria-valuemin="0" aria-valuemax="100" aria-labelledby="volumeLabel">
+        meeter
+    </div>
+    <!-- Meter Sample HTML End -->
+
+    <!-- Radio Group Sample HTML Start -->
+    <div role="radiogroup" aria-labelledby="groupLabel1" id="rg1">
+        <h4 id="groupLabel1">Pizza crust</h4>
+        
+        <input type="radio" name="pC" id="rc" aria-checked="false" tabindex="0" />
+        <label for="rc">Regular crust</label>
+
+        <input type="radio" name="pC" id="dd" aria-checked="false" tabindex="-1" />
+        <label for="dd">Deep dish</label>
+
+        <input type="radio" name="pC" id="tc" aria-checked="false" tabindex="-1" />
+        <label for="tc">Thin crust</label>
+    </div>
+    <div role="radiogroup" aria-labelledby="idRatingLabel" data-rating-value="">
+        <h4 id="idRatingLabel">Rating</h4>
+        <div role="none">
+            <span class="star" role="radio" aria-checked="false" data-rating="1" tabindex="-1" aria-label="One star"></span>
+            <span class="star" role="radio" aria-checked="false" data-rating="2" tabindex="-1" aria-label="Two star"></span>
+            <span class="star" role="radio" aria-checked="false" data-rating="3" tabindex="-1" aria-label="Three star"></span>
+            <span class="star" role="radio" aria-checked="false" data-rating="4" tabindex="-1" aria-label="Four star"></span>
+            <span class="star" role="radio" aria-checked="false" data-rating="5" tabindex="-1" aria-label="Five star"></span>
+        </div>
+    </div>
+    <!-- Radio Group Sample HTML End -->
+
+    <!-- Slider Sample HTML Start -->
+    <div role="group" aria-labelledby="idColorViewer">
+        <h4 id="idColorViewer">Color Viewer</h4>
+        <p id="redRange">Red</p>
+        <input type="range" aria-labelledby="redRange" role="slider" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100" tabindex="0" />
+
+        <p id="greenRange">Green</p>
+        <input type="range" aria-labelledby="greenRange" role="slider" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100" tabindex="0" />
+    </div>
+
+    <h4 id="idTempLabel">Vertical Temperature Slider Example</h4>
+    <input type="range" role="slider" aria-orientation="vertical" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="33" aria-labelledby="idTempLabel" />
+    <!-- Slider Sample HTML End -->
+
+    <!-- Multi Slider Sample HTML Start -->
+    <div role="none">
+        <input type="range" role="slider" aria-orientation="vertical" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="23" aria-label="Min Price" />
+        <input type="range" role="slider" aria-orientation="vertical" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="63" aria-label="Max Price" />
+    </div>
+    <!-- Multi Slider Sample HTML End -->
+
+    <!-- Spin button Sample HTML Start -->
+    <div role="group" aria-labelledby="dateLabel selDate">
+        <h4 id="dateLabel">Choose Date</h4>
+        <div>
+            <button type="button" tabindex="-1" aria-label="Previous Day">Prev</button>
+            <span class="prev" aria-hidden="true">30</span>
+            <span role="spinbutton" tabindex="0" aria-valuetext="first" aria-valuenow="1" aria-valuemin="1" aria-valuemax="31" aria-label="Day"></span>
+            <span class="next" aria-hidden="true">2</span>
+            <button type="button" tabindex="-1" aria-label="Next Day">Next</button>
+        </div>
+    </div>
+    <!-- Spin button Sample HTML End -->
+
+    <!-- Switch Sample HTML Start -->
+    <fieldset>
+        <legend>Accessibility Switch</legend>
+        <label>
+            <span class="label">Reduce motion</span>
+            <input type="checkbox" id="switch1" role="switch">
+            <span class="state">
+                <span class="container">
+                    <span class="position"></span>
+                </span>
+                <span class="on" aria-hidden="true">On</span>
+                <span class="off" aria-hidden="true">Off</span>
+            </span>
+        </label>
+        <label>
+            <span class="label">Show caption</span>
+            <input type="checkbox" id="switch2" role="switch">
+            <span class="state">
+                <span class="container">
+                    <span class="position"></span>
+                </span>
+                <span class="on" aria-hidden="true">On</span>
+                <span class="off" aria-hidden="true">Off</span>
+            </span>
+        </label>
+    </fieldset>
+    <!-- Switch Sample HTML End -->
+
+    <!-- Tabs Sample HTML Start -->
+    <div>
+        <h3 id="tablist1">Product Category</h3>
+        <div role="tablist" aria-labelledby="tablist1">
+            <button type="button" id="tab1" role="tab" aria-controls="tabpanel1" aria-selected="true">
+                Men
+            </button>
+            <button type="button" id="tab2" role="tab" aria-controls="tabpanel2" aria-selected="false" tabindex="-1">
+                Women
+            </button>
+            <button type="button" id="tab3" role="tab" aria-controls="tabpanel3" aria-selected="false" tabindex="-1">
+                Appliance
+            </button>
+            <button type="button" id="tab4" role="tab" aria-controls="tabpanel4" aria-selected="false" tabindex="-1">
+                Appliance
+            </button>
+        </div>
+        <div role="tabpanel" aria-labelledby="tab1" id="tabpanel1" tabindex="0">
+            Tab details 1
+        </div>
+        <div role="tabpanel" aria-labelledby="tab2" id="tabpanel2" tabindex="0" hidden>
+            Tab details 2
+        </div>
+        <div role="tabpanel" aria-labelledby="tab3" id="tabpanel3" tabindex="0" hidden>
+            Tab details 3
+        </div>
+        <div role="tabpanel" aria-labelledby="tab4" id="tabpanel4" tabindex="0" hidden>
+            Tab details 4
+        </div>
+    </div>
+    <!-- Tabs Sample HTML End -->
+
+    <!-- Tree view Sample HTML Start -->
+    <h3 id="treeLabel">File Directory Treeview Example</h3>
+    <ul role="tree" aria-labelledby="treeLabel">
+        <li role="treeitem" aria-selected="false" aria-expanded="false">
+            <span>Projects</span>
+            <ul role="group">
+                <li role="treeitem" aria-selected="false">Project 1</li>
+                <li role="treeitem" aria-selected="false">Project 2</li>
+                <li role="treeitem" aria-expanded="false" aria-selected="false">
+                    <span>Project 3</span>
+                    <ul role="group">
+                        <li role="treeitem" aria-selected="false">Project 3.1</li>
+                        <li role="treeitem" aria-selected="false">Project 3.2</li>
+                        <li role="treeitem" aria-selected="false">Project 3.3</li>
+                        <li role="treeitem" aria-selected="false" aria-expanded="false">
+                            <span>Project 3.4</span>
+                            <ul role="group">
+                                <li role="treeitem" aria-selected="false">Project 3.4.1</li>
+                                <li role="treeitem" aria-selected="false">Project 3.4.2</li>
+                                <li role="treeitem" aria-selected="false">Project 3.4.3</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <nav aria-label="Product Menu">
+        <ul role="tree" aria-label="Product menu list">
+            <li role="none">
+                <a role="treeitem" aria-current="page" href="#">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li role="none">
+                <a href="#" role="treeitem" aria-expanded="false" aria-owns="idAboutSubtree">
+                    <span class="label">
+                        About
+                        <span class="icon">^</span>
+                    </span>
+                </a>
+                <ul id="idAboutSubtree" role="group" aria-label="About">
+                    <li role="none">
+                        <a role="treeitem" href="#">Overview</a>
+                    </li>
+                    <li role="none">
+                        <a role="treeitem" href="#">Overview</a>
+                    </li>
+                </ul>
+            </li>
+            <li role="none">
+                <a role="treeitem" aria-expanded="false" aria-owns="idFactSubtree" href="#">
+                    <span class="label">
+                        Facts
+                        <span class="icon">^</span>
+                    </span>
+                </a>
+                <ul id="idFactSubtree" role="group" aria-label="Fact">
+                    <li role="none">
+                        <a role="treeitem" href="">Facts 1</a>
+                    </li>
+                    <li role="none">
+                        <a role="treeitem" href="">Facts 2</a>
+                    </li>
+                    <li role="none">
+                        <a role="treeitem" href="">Facts 3</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <!-- Tree view Sample HTML End -->
+
+    <!-- Tree grid Sample HTML Start -->
+
+    <!-- Tree grid Sample HTML End -->
+
+    <!-- Window splitter Sample HTML Start -->
+
+    <!-- Window splitter Sample HTML End -->
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
